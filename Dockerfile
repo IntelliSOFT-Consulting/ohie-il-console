@@ -39,8 +39,7 @@ VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/v
 COPY html /var/www/html/
 #RUN tar -zxvf /var/www/html/openhim-console-v1.9.0.tar.gz -C /var/www/html/
 
-RUN cd /etc/nginx
-
-CMD nginx
+COPY run.sh /run.sh
+CMD ./run.sh
 
 EXPOSE 80
