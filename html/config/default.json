@@ -2,7 +2,7 @@
   "version": "1.9.0",
   "minimumCoreVersion": "3.2.0",
   "protocol": "https",
-  "host": "ohie-il",
+  "host": "localhost",
   "port": "8080",
   "title": "Admin Console",
   "footerTitle": "OpenHIM Administration Console",
