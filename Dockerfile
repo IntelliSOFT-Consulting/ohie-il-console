@@ -25,6 +25,7 @@ RUN \
   chown -R www-data:www-data /var/lib/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY default /etc/nginx/sites-available/default
 
 # Define mountable directories.
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/var/www/html"]
@@ -41,3 +42,4 @@ COPY run.sh /run.sh
 CMD ./run.sh
 
 EXPOSE 80
+EXPOSE 443
