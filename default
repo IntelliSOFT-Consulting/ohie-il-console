@@ -40,8 +40,8 @@ server {
         listen 443 ssl http2;
         listen [::]:443 ssl http2;
 
-	ssl_certificate $IL_CONSOLE_CERT;
-	ssl_certificate_key $IL_CONSOLE_KEY;
+	ssl_certificate $CERT_LOCATION;
+	ssl_certificate_key $KEY_LOCATION;
  
         ssl_session_cache shared:SSL:20m;
         ssl_session_timeout 60m;
@@ -54,7 +54,7 @@ server {
  
         ssl_stapling on;
         ssl_stapling_verify on;
-        $IL_TRUSTCHAIN
+        $TRUSTCHAIN
         resolver 8.8.8.8 8.8.4.4;
  
         #add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;

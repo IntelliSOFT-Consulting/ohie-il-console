@@ -1,17 +1,17 @@
 #!/bin/bash
 
-: ${IL_HOST=localhost}
+: ${SERVER_ADDRESS=localhost}
 : ${IL_PORT=8080}
-: ${IL_TRUSTCHAIN=""}
-: ${IL_CONSOLE_CERT=/etc/nginx/certs/sedish.net.crt}
-: ${IL_CONSOLE_KEY=/etc/nginx/certs/sedish.net.key}
+: ${TRUSTCHAIN=""}
+: ${CERT_LOCATION=/etc/nginx/certs/sedish.net.crt}
+: ${KEY_LOCATION=/etc/nginx/certs/sedish.net.key}
 : ${ILR_HOST=localhost}
 
-export IL_HOST
+export SERVER_ADDRESS
 export IL_PORT
-export IL_CONSOLE_CERT
-export IL_CONSOLE_KEY
-export IL_TRUSTCHAIN
+export CERT_LOCATION
+export KEY_LOCATION
+export TRUSTCHAIN
 export ILR_HOST
 
 /utils/replace-vars /var/www/html/config/default.json

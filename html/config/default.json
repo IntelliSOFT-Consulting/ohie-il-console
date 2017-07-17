@@ -2,7 +2,7 @@
   "version": "1.9.0",
   "minimumCoreVersion": "3.2.0",
   "protocol": "https",
-  "host": "$IL_HOST",
+  "host": "$SERVER_ADDRESS",
   "port": "$IL_PORT",
   "title": "Admin Console",
   "footerTitle": "OpenHIM Administration Console",
